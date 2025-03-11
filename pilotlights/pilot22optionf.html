@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<script src="refresh.js"></script>
+<script>
+       $(document).ready(function() {
+    $('.btn-common').on('click', function() {
+        
+        var parent = $(this).closest('.option-group');
+       
+      
+
+       
+        var allButtons = parent.siblings().find('.btn-common');
+
+      
+        allButtons.toggle();
+        
+     
+        var nestedOptions = $(this).next();
+        nestedOptions.toggle(); 
+
+      
+        $(this).show();
+
+      
+    });});
+
+
+    
+//     document.querySelectorAll('.whitebtn').forEach(button => {
+//     button.addEventListener('click', function () {
+//         // Select all forms with the class 'flushform' and reset their inputs
+//         const flushForms = document.querySelectorAll('.flushform');
+//         flushForms.forEach(form => form.reset());
+
+//         // Hide elements
+//         document.getElementById('result').classList.add('hidden');
+//         document.getElementById('description').classList.add('hidden');
+//         document.getElementById('noimageContainer').classList.add('hidden');
+//         document.getElementById('ncimageContainer').classList.add('hidden');
+//         document.getElementById('EnoimageContainer').classList.add('hidden');
+//         document.getElementById('EncimageContainer').classList.add('hidden');
+//         document.getElementById('whiteimageContainer').classList.add('hidden');
+//         document.getElementById('blackimageContainer').classList.add('hidden');
+//         document.getElementById('greenimageContainer').classList.add('hidden');
+//         document.getElementById('redimageContainer').classList.add('hidden');
+//         document.getElementById('blueimageContainer').classList.add('hidden');
+//         document.getElementById('yellowimageContainer').classList.add('hidden');
+
+//         // Hide plus buttons
+//         document.getElementById('plus1').style.display = 'none';
+//         document.getElementById('plus2').style.display = 'none';
+//         document.getElementById('Eplus2').style.display = 'none';
+
+//     });
+// });
+    
+//     document.querySelectorAll('.fwitharrow').forEach(button => {
+//     button.addEventListener('click', function () {
+//         // Select all forms with the class 'flushform' and reset their inputs
+//         const flushForms = document.querySelectorAll('.flushform');
+//         flushForms.forEach(form => form.reset());
+
+//         // Hide elements
+//         document.getElementById('result').classList.add('hidden');
+//         document.getElementById('description').classList.add('hidden');
+//         document.getElementById('fwanoimageContainer').classList.add('hidden');
+//         document.getElementById('fwancimageContainer').classList.add('hidden');
+//         document.getElementById('fwaEnoimageContainer').classList.add('hidden');
+//         document.getElementById('fwaEncimageContainer').classList.add('hidden');
+//         document.getElementById('fwawhiteimageContainer').classList.add('hidden');
+//         document.getElementById('fwablackimageContainer').classList.add('hidden');
+//         document.getElementById('fwagreenimageContainer').classList.add('hidden');
+//         document.getElementById('fwaredimageContainer').classList.add('hidden');
+//         document.getElementById('fwablueimageContainer').classList.add('hidden');
+//         document.getElementById('fwayellowimageContainer').classList.add('hidden');
+
+//         // Hide plus buttons
+//         document.getElementById('fwaplus1').style.display = 'none';
+//         document.getElementById('fwaplus2').style.display = 'none';
+//         document.getElementById('fwaEplus2').style.display = 'none';
+
+//     });
+// });
+
+
+// document.querySelectorAll('.projbtn').forEach(button => {
+//     button.addEventListener('click', function () {
+//         // Select all forms with the class 'flushform' and reset their inputs
+//         const flushForms = document.querySelectorAll('.flushform');
+//         flushForms.forEach(form => form.reset());
+
+//         // Hide elements
+//         document.getElementById('result').classList.add('hidden');
+//         document.getElementById('description').classList.add('hidden');
+//         document.getElementById('projnoimageContainer').classList.add('hidden');
+//         document.getElementById('projncimageContainer').classList.add('hidden');
+//         document.getElementById('projEnoimageContainer').classList.add('hidden');
+//         document.getElementById('projEncimageContainer').classList.add('hidden');
+//         document.getElementById('projwhiteimageContainer').classList.add('hidden');
+//         document.getElementById('projblackimageContainer').classList.add('hidden');
+//         document.getElementById('projgreenimageContainer').classList.add('hidden');
+//         document.getElementById('projredimageContainer').classList.add('hidden');
+//         document.getElementById('projblueimageContainer').classList.add('hidden');
+//         document.getElementById('projyellowimageContainer').classList.add('hidden');
+
+//         // Hide plus buttons
+//         document.getElementById('projplus1').style.display = 'none';
+//         document.getElementById('projplus2').style.display = 'none';
+//         document.getElementById('projEplus2').style.display = 'none';
+
+//     });
+// });
+
+// document.querySelectorAll('.frrabtn').forEach(button => {
+//     button.addEventListener('click', function () {
+//         // Select all forms with the class 'flushform' and reset their inputs
+//         const flushForms = document.querySelectorAll('.flushform');
+//         flushForms.forEach(form => form.reset());
+
+//         // Hide elements
+//         document.getElementById('result').classList.add('hidden');
+//         document.getElementById('description').classList.add('hidden');
+//         document.getElementById('frranoimageContainer').classList.add('hidden');
+//         document.getElementById('frrancimageContainer').classList.add('hidden');
+//         document.getElementById('frraEnoimageContainer').classList.add('hidden');
+//         document.getElementById('frraEncimageContainer').classList.add('hidden');
+//         document.getElementById('frrawhiteimageContainer').classList.add('hidden');
+//         document.getElementById('frrablackimageContainer').classList.add('hidden');
+//         document.getElementById('frragreenimageContainer').classList.add('hidden');
+//         document.getElementById('frraredimageContainer').classList.add('hidden');
+//         document.getElementById('frrablueimageContainer').classList.add('hidden');
+//         document.getElementById('frrayellowimageContainer').classList.add('hidden');
+
+//         // Hide plus buttons
+//         document.getElementById('frraplus1').style.display = 'none';
+//         document.getElementById('frraplus2').style.display = 'none';
+//         document.getElementById('frraEplus2').style.display = 'none';
+
+//     });
+// });
+
+// document.querySelectorAll('.bootbtn').forEach(button => {
+//     button.addEventListener('click', function () {
+//         // Select all forms with the class 'flushform' and reset their inputs
+//         const flushForms = document.querySelectorAll('.flushform');
+//         flushForms.forEach(form => form.reset());
+
+//         // Hide elements
+//         // document.getElementById('result').classList.add('hidden');
+//         document.getElementById('description').classList.add('hidden');
+//         document.getElementById('bootnoimageContainer').classList.add('hidden');
+//         document.getElementById('bootncimageContainer').classList.add('hidden');
+//         document.getElementById('bootEnoimageContainer').classList.add('hidden');
+//         document.getElementById('bootEncimageContainer').classList.add('hidden');
+//         document.getElementById('bootwhiteimageContainer').classList.add('hidden');
+//         document.getElementById('bootblackimageContainer').classList.add('hidden');
+//         document.getElementById('bootgreenimageContainer').classList.add('hidden');
+//         document.getElementById('bootredimageContainer').classList.add('hidden');
+//         document.getElementById('bootblueimageContainer').classList.add('hidden');
+//         document.getElementById('bootyellowimageContainer').classList.add('hidden');
+
+//         // Hide plus buttons
+//         document.getElementById('bootplus1').style.display = 'none';
+//         document.getElementById('bootplus2').style.display = 'none';
+//         document.getElementById('bootEplus2').style.display = 'none';
+
+//     });
+// });
+</script>
+<style>
+    .outputflex{
+        display: flex;
+    }
+    .output{
+        margin-top: -300px;
+    }
+</style>
+<body>
+   
+    <div class="option-group">
+        <button class="option-btn btn-common whitebtn" onclick="screwter()">P2PLB</button>
+        <div class="nested-options scrwop">
+      
+</div>
+<script> 
+    function screwter() {
+        fetch('pilotlights/pilot221stoptionf.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.scrwop').innerHTML = data;
+                executeScripts(document.querySelector('.scrwop')); // Execute scripts in loaded content
+            })
+            .catch(error => console.error('Error fetching content:', error));
+    }
+    
+    function executeScripts(element = document.getElementById('scrwop')) {
+if (!element) {
+console.error("Element not found: momentoryclipon");
+return;
+}
+
+const scripts = element.getElementsByTagName('script');
+
+for (let i = 0; i < scripts.length; i++) {
+const script = scripts[i];
+
+if (script.src) {
+// Prevent duplicate script insertion
+if (!document.querySelector(`script[src="${script.src}"]`)) {
+const newScript = document.createElement('script');
+newScript.src = script.src;
+document.body.appendChild(newScript);
+}
+} else {
+// Remove all previous dynamically added scripts before adding new ones
+document.querySelectorAll("script[data-dynamic]").forEach(script => script.remove());
+
+const newScript = document.createElement('script');
+newScript.text = script.innerHTML;
+newScript.setAttribute("data-dynamic", "true"); 
+document.body.appendChild(newScript);
+}
+}
+}
+
+
+
+</script>
+</div>
+     
+</body>
+</html>
