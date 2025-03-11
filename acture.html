@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknic Product Configurator</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script>
+
+
+
+
+
+
+$(document).ready(function() {
+    // Flush button click event
+    $(".flush").click(function() {
+        // Use Ajax to simulate refreshing the content
+        $.ajax({
+            url: window.location.href, // Reload the current page (or you can use a specific URL to fetch content)
+            type: 'GET',
+            success: function(response) {
+                // Assuming the container with the id 'output' holds the content you want to refresh
+                $(".output").html($(response).find(".output").html());
+            },
+            error: function(xhr, status, error) {
+                console.error("Error while refreshing content:", error);
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// button close system
+
+$(document).ready(function() {
+    $('.btn-common').on('click', function() {
+        
+        var parent = $(this).closest('.option-group');
+       
+      
+
+       
+        var allButtons = parent.siblings().find('.btn-common');
+
+      
+        allButtons.toggle();
+        
+     
+        var nestedOptions = $(this).next();
+        nestedOptions.toggle(); 
+
+      
+        $(this).show();
+
+      
+    });
+    // $('.option-btn').on('click',function(){
+    //     var nestedOptions = $(this).next();
+    //     nestedOptions.toggle();
+    // })
+
+    
+});
+
+    </script>
+    <style>
+        .hidden {
+    display: none;
+}
+
+    </style>
+
+
+    <!-- Container for all nested options -->
+    <div class="mastercon">
+    <div id="optionsContainer" class="container " style="display: block;" >
+        <div class="option-group first">
+            <button class="option-btn btn-common">Push Button</button>
+            <div class="nested-options"style="display: block;">
+       
+
+    <div class="option-group">
+        <button class="option-btn btn-common">Ø22.5 mm</button>
+                   
+                          <div class="nested-options"style="display: block;">
+                                        <div class="option-group" >
+                                            <button class="option-btn btn-common">Momentory Actuators</button>
+                                            <div class="nested-options" style="display: block;">
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common">Plastic Series</button>
+                                                <div class="nested-options" style="display: block;">
+                                                    
+                                        <div class="option-group">
+                                            <button class="option-btn btn-common">Actuator</button>
+                                            <div class="nested-options">                                               
+                            <div class="option-group">
+                                        <button class="option-btn btn-common flush">Flush</button>
+                                        <div class="nested-options">
+                                            <!-- 1st colour -->
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common " data-color="white">
+                                                    <div class="white-btn"></div> (P2AF1)
+                                                </button>                                                                           
+                                            </div>
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common " data-color="black">
+                                                    <div class="black-btn"></div> (P2AF2)
+                                                </button>                                            
+                                            </div>
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common " data-color="green">
+                                                    <div class="green-btn"></div> (P2AF3)
+                                                </button>
+                                            </div>
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common " data-color="red">
+                                                    <div class="red-btn"></div> (P2AF4)
+                                                </button>
+                                            </div>
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common " data-color="blue">
+                                                    <div class="blue-btn"></div> (P2AF6)
+                                                </button>
+                                            </div>
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common " data-color="yellow">
+                                                    <div class="yellow-btn"></div> (P2AF8)
+                                                </button>
+                                            </div>
+                                         
+                                    </div>
+                                </div>
+                                         
+                            
+<!-- 
+                                    1
+                                    11
+                                    11
+                                    1
+                                    1
+                                    1
+                                    1
+                                    11
+                                    11
+                                    11
+                                    1
+                                    1
+                                    11
+                                    1
+                                    11
+                                    1
+                                    11
+                                     -->
+                                    <div class="option-group">
+                                        <button class="option-btn btn-common fwam">Flush With Arrow Marking</button>
+
+                                        <div class="nested-options">
+                                         <!-- 1st colour -->
+                                         <div class="option-group">
+                                            <button class="option-btn btn-common " adata-color="white">
+                                                <div class="white-btn"></div> (P2AF1)
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="option-group">
+                                            <button class="option-btn btn-common " adata-color="black">
+                                                <div class="black-btn"></div> (P2AF2)
+                                            </button>
+                                        </div>
+                                        
+                                                   
+                                    </div>
+                                </div>
+                                   
+                                    
+
+                                    <!-- 
+                                    *
+                                    *
+                                    *
+                                    *
+                                    *
+                                    *
+                                     -->
+                                    <div class="option-group">
+                                        <button class="option-btn btn-common Proj">Projecting</button>
+
+                                        <div class="nested-options">
+                                            <!-- 1st colour -->
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" pdata-color="white">
+                                                    <div class="white-btn"></div> (P2AF1)
+                                                </button>
+                                            </div>
+                                        
+                                            <!-- 2nd colour -->
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" pdata-color="black">
+                                                    <div class="black-btn"></div> (P2AF2)
+                                                </button>
+                                            </div>
+                                        
+                                            <!-- 3rd colour -->
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" pdata-color="green">
+                                                    <div class="green-btn"></div> (P2AF3)
+                                                </button>
+                                            </div>
+                                        
+                                            <!-- 4th colour -->
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" pdata-color="red">
+                                                    <div class="red-btn"></div> (P2AF4)
+                                                </button>
+                                            </div>
+                                        
+                                            <!-- 5th colour -->
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" pdata-color="blue">
+                                                    <div class="blue-btn"></div> (P2AF6)
+                                                </button>
+                                            </div>
+                                        
+                                            <!-- 6th colour -->
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" pdata-color="yellow">
+                                                    <div class="yellow-btn"></div> (P2AF8)
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+
+
+
+                                    </div>
+
+                                    <!-- 
+                                    ******************************
+                                    ***********************************
+                                    **************************************
+                                    ******************************************
+                                    *************************************************
+                                    *******************************************************
+                                     -->
+                                    <div class="option-group">
+                                        <button class="option-btn btn-common frra">Flush Relay Reset Actuator</button>
+
+
+                                        <div class="nested-options">
+                                            <!-- 1st colour -->
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" fdata-color="white">
+                                                    <div class="white-btn"></div> (P2AF1)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" fdata-color="black">
+                                                    <div class="black-btn"></div> (P2AF2)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" fdata-color="green">
+                                                    <div class="green-btn"></div> (P2AF3)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" fdata-color="red">
+                                                    <div class="red-btn"></div> (P2AF4)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" fdata-color="blue">
+                                                    <div class="blue-btn"></div> (P2AF6)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" fdata-color="yellow">
+                                                    <div class="yellow-btn"></div> (P2AF8)
+                                                </button>
+                                            </div>
+                                            
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- 
+                                    ################################
+                                    ########################################
+                                    ##############################################
+                                    ###################################################
+                                    #########################################################
+                                    
+                                    -->
+                                    <div class="option-group">
+                                        <button class="option-btn btn-common boot">Booted</button>
+
+                                        <div class="nested-options">
+                                            <!-- 1st colour -->
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" bdata-color="white">
+                                                    <div class="white-btn"></div> (P2AF1)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" bdata-color="black">
+                                                    <div class="black-btn"></div> (P2AF2)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" bdata-color="green">
+                                                    <div class="green-btn"></div> (P2AF3)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" bdata-color="red">
+                                                    <div class="red-btn"></div> (P2AF4)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" bdata-color="blue">
+                                                    <div class="blue-btn"></div> (P2AF6)
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="option-group">
+                                                <button class="option-btn btn-common" bdata-color="yellow">
+                                                    <div class="yellow-btn"></div> (P2AF8)
+                                                </button>
+                                            </div>
+                                            
+                                        </div>
+                                        
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                          
+                      
+
+                                         
+                                <!--*****************************************************  -->
+                           
+                            <div class="option-group">
+                             
+                                <button class="option-btn btn-common"><a href="index.html">pushbutton</a></button>
+
+             
+        </div>
+                        </div>
+                   
+                </div>
+                    
+                        
+                    </div>
+                </div>
+                                       
+                                    
+                                </div>
+                                
+                          
+                        
+                        </div>
+                         
+                  
+               
+
+            </div>
+        </div>
+        <!-- Sibling for Option 1 -->
+        
+        
+       
+        </div>
+  
+<div class="output">
+
+   <!-- Result display section -->
+<!-- Result display section -->
+<div id="result" class="result hidden">
+ 
+    <p id="generated-code"></p>
+    <div id="description" class="description hidden">
+        <h2 id="description-title"></h2>
+    </div>
+</div>
+
+
+   
+<div class="flushimg">
+   
+    <img src="flush/white.png" id="white" class="hidden" alt="White">
+    <img src="flush/black.png" id="black" class="hidden" alt="Black">
+    <img src="flush/green.png" id="green" class="hidden" alt="Green">
+    <img src="flush/red.png" id="red" class="hidden" alt="Red">
+    <img src="flush/blue.png" id="blue" class="hidden" alt="Blue">
+    <img src="flush/yellow.png" id="yellow" class="hidden" alt="Yellow">
+</div>
+
+
+<script>
+ 
+// Add event listeners to all buttons with the class 'option-btn'
+document.querySelectorAll('.option-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        // Get the color value from the data-color attribute
+        const color = this.getAttribute('data-color');
+
+        // Hide all images initially by adding the 'hidden' class
+        document.querySelectorAll('.flushimg img').forEach(img => {
+            img.classList.add('hidden');
+        });
+
+        // Show the corresponding image by removing the 'hidden' class
+        const selectedImage = document.getElementById(color);
+        if (selectedImage) {
+            selectedImage.classList.remove('hidden'); // Make the corresponding image visible
+        }
+    });
+});
+
+
+
+
+</script>
+
+
+<!-- flusj images close -->
+ <!-- arrow atart -->
+     <!-- Image Section -->
+  
+        <div class="arrow">
+            <img src="arrow/white.png" id="awhite" class="hidden" alt="White">
+            <img src="arrow/black.png" id="ablack" class="hidden" alt="Black">
+        </div>
+    
+        <script>
+            // Add event listeners to all buttons with the class 'option-btn'
+document.querySelectorAll('.option-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        // Get the color value from the data-color attribute
+        const color = this.getAttribute('adata-color');
+
+        // Hide all images initially by adding the 'hidden' class
+        document.querySelectorAll('.arrow img').forEach(img => {
+            img.classList.add('hidden');
+        });
+
+        // Show the corresponding image by removing the 'hidden' class
+        const selectedImage = document.getElementById("a"+color);
+        if (selectedImage) {
+            selectedImage.classList.remove('hidden'); // Make the corresponding image visible
+        }
+    });
+});
+        </script>
+<!-- arrow close -->
+
+
+
+ <!-- projection start -->
+  <!-- Image Section -->
+   <div class="pro">
+
+    <img src="projecting/white.png" id="projectingwhite" class="hidden" alt="White">
+    <img src="projecting/black.png" id="projectingblack" class="hidden" alt="Black">
+    <img src="projecting/green.png" id="projectinggreen" class="hidden" alt="Green">
+    <img src="projecting/red.png" id="projectingred" class="hidden" alt="Red">
+    <img src="projecting/blue.png" id="projectingblue" class="hidden" alt="Blue">
+    <img src="projecting/yellow.png" id="projectingyellow" class="hidden" alt="Yellow">
+</div>
+
+<script>
+    // Add event listeners to all buttons with the class 'option-btn'
+document.querySelectorAll('.option-btn').forEach(button => {
+button.addEventListener('click', function () {
+// Get the color value from the data-color attribute
+const color = this.getAttribute('pdata-color');
+
+// Hide all images initially by adding the 'hidden' class
+document.querySelectorAll('.pro img').forEach(img => {
+    img.classList.add('hidden');
+});
+
+// Show the corresponding image by removing the 'hidden' class
+const selectedImage = document.getElementById("projecting"+color);
+if (selectedImage) {
+    selectedImage.classList.remove('hidden'); // Make the corresponding image visible
+}
+});
+});
+</script>
+
+<!-- projection close -->
+ <!-- arrow -->
+<!-- Image Section -->
+<div class="frra">
+  
+    <img src="frra/white.png" id="frrawhite" class="hidden" alt="White">
+    <img src="frra/black.png" id="frrablack" class="hidden" alt="Black">
+    <img src="frra/green.png" id="frragreen" class="hidden" alt="Green">
+    <img src="frra/red.png" id="frrared" class="hidden" alt="Red">
+    <img src="frra/blue.png" id="frrablue" class="hidden" alt="Blue">
+    <img src="frra/yellow.png" id="frrayellow" class="hidden" alt="Yellow">
+
+</div>
+<!-- arrow close -->
+<script>
+    // Add event listeners to all buttons with the class 'option-btn'
+document.querySelectorAll('.option-btn').forEach(button => {
+button.addEventListener('click', function () {
+// Get the color value from the data-color attribute
+const color = this.getAttribute('fdata-color');
+
+// Hide all images initially by adding the 'hidden' class
+document.querySelectorAll('.frra img').forEach(img => {
+    img.classList.add('hidden');
+});
+
+// Show the corresponding image by removing the 'hidden' class
+const selectedImage = document.getElementById("frra"+color);
+if (selectedImage) {
+    selectedImage.classList.remove('hidden'); // Make the corresponding image visible
+}
+});
+});
+</script>
+<!-- boot -->
+<div class="boot">
+    <img src="boot/white.png" id="bootwhite" class="hidden" alt="White">
+    <img src="boot/black.png" id="bootblack" class="hidden" alt="Black">
+    <img src="boot/green.png" id="bootgreen" class="hidden" alt="Green">
+    <img src="boot/red.png" id="bootred" class="hidden" alt="Red">
+    <img src="boot/blue.png" id="bootblue" class="hidden" alt="Blue">
+    <img src="boot/yellow.png" id="bootyellow" class="hidden" alt="Yellow">
+</div>
+<!-- boot close -->
+
+<script>
+    // Add event listeners to all buttons with the class 'option-btn'
+document.querySelectorAll('.option-btn').forEach(button => {
+button.addEventListener('click', function () {
+// Get the color value from the data-color attribute
+const color = this.getAttribute('bdata-color');
+
+// Hide all images initially by adding the 'hidden' class
+document.querySelectorAll('.boot img').forEach(img => {
+    img.classList.add('hidden');
+});
+
+// Show the corresponding image by removing the 'hidden' class
+const selectedImage = document.getElementById("boot"+color);
+if (selectedImage) {
+    selectedImage.classList.remove('hidden'); // Make the corresponding image visible
+}
+});
+});
+</script>
+</div>
+</div>
+
+
+    <!-- <script src="script.js"></script> -->
+
+<script>
+          
+         
+   
+
+
+
+</script>
+
+</body>
+
+</html>
